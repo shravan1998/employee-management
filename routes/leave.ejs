@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Employee Management</title>
+        <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+        <link href="style.css" rel="stylesheet">
+      
+    </head>
+    <body>
+       <div class="home-container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Employee Management</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/enter-details">Enter Details</a>
+                <a class="nav-item nav-link" href="/employee-details">Emloyee Details</a>
+                <a class="nav-item nav-link" href="/about">About Company</a>
+                <a class="nav-item nav-link " href="/reviews">Company Reviews</a>
+                <a class="nav-item nav-link active" href="/leave">Leave  <span class="sr-only">(current)</span></a>
+              </div>
+              <span class="navbar-text">
+                <button type="button" class="btn btn-danger">Log Out</button>
+              </span>
+            </div>
+          </nav>
+          <form>
+              <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="days">Number Of days</label>
+                    <input class="form-control" type="number" id="days">
+        </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">From</label>
+              <input type="date" class="form-control" id="inputEmail4">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">To</label>
+              <input type="date" class="form-control" id="inputPassword4">
+            </div>
+          </div>
+      
+        <div class="row">
+            <div class="form-group col-md-6">
+            <input class="form-control" type="text" placeholder="Enter Subject">
+            </div>
+        </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label class="my-1 mr-2" for="details">Message</label>
+            <textarea class="form-control" rows="5" id="details">
+               </textarea>
+              </div>
+        </div>
+            
+            
+            <button type="submit" class="btn btn-success">Submit</button>
+          </form>
+       </div>
+              
+    </body>
+   
+</html>

@@ -16,8 +16,20 @@ app.get('/login',function(req,res){
 app.get('/register',function(req,res){
     res.render('routes/register');
 });
-app.get('/dashboard',function(req,res){
+app.get('/employee-entry',function(req,res){
     res.render('routes/dashboard');
+});
+app.get('/employee-details',function(req,res){
+    res.render('routes/details');
+});
+app.get('/about',function(req,res){
+    res.render('routes/about');
+});
+app.get('/reviews',function(req,res){
+    res.render('routes/reviews');
+});
+app.get('/leave',function(req,res){
+    res.render('routes/leave');
 });
 app.set('views',__dirname);
 app.use(express.static(__dirname+'/'));

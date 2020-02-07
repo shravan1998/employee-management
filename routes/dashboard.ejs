@@ -10,8 +10,99 @@
     </head>
     <body>
        <div class="home-container">
-
-<!--/. Sidebar navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Employee Management</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Enter Details <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="/employee-details">Emloyee Details</a>
+                <a class="nav-item nav-link" href="/about">About Company</a>
+                <a class="nav-item nav-link" href="/reviews">Company Reviews</a>
+                <a class="nav-item nav-link" href="/leave">Leave</a>
+              </div>
+              <span class="navbar-text">
+                <button type="button" class="btn btn-danger">Log Out</button>
+              </span>
+            </div>
+          </nav>
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">First Name</label>
+                <input type="text" class="form-control" id="inputEmail4" placeholder="First Name">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Last Name</label>
+                <input type="text" class="form-control" id="inputPassword4" placeholder="Last Name">
+              </div>
+            </div>
+            <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Start Date</label>
+                <input type="date" class="form-control" id="inputEmail4">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Job Title</label>
+                <input type="text" class="form-control" id="inputPassword4" placeholder="Job Title">
+              </div>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline1" name="Type" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline1">Full Timer</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline2" name="Type" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline2">Intern/Freelancer</label>
+              </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity">
+              </div>
+             
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputCity">Designation</label>
+                  <input type="text" class="form-control" id="inputCity">
+                </div>
+               
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Team</label>
+                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                      <option selected>Choose...</option>
+                      <option value="1">Developer</option>
+                      <option value="2">Tester</option>
+                      <option value="3">Others</option>
+                    </select>
+                </div>
+               
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputCity">Team Manager</label>
+                  <input type="text" class="form-control" id="inputCity">
+                </div>
+               
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="inputCity">Salary Per Year</label>
+                  <input type="text" class="form-control" id="inputCity" placeholder="In Rupees">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputCity">Date Of Salary</label>
+                    <input type="date" class="form-control" id="inputCity">
+                  </div>
+              </div>
+            
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </form>
        </div>
               
     </body>
