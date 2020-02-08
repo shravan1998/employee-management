@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "bcrypt": "^3.0.8",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.4.1",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
+    "localStorage": "^1.0.4",
     "mdbootstrap": "^4.12.0",
     "mysql": "^2.18.1",
+    "node-sessionstorage": "^1.0.0",
     "path": "^0.12.7",
     "popper.js": "^1.16.1"
   },

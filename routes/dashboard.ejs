@@ -24,7 +24,7 @@
                 <a class="nav-item nav-link" href="/leave">Leave</a>
               </div>
               <span class="navbar-text">
-                <button type="button" class="btn btn-danger">Log Out</button>
+                <button type="button" class="btn btn-danger" onclick="location.href='/login'">Log Out</button>
               </span>
             </div>
           </nav>
@@ -32,53 +32,53 @@
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputEmail4">First Name</label>
-                <input type="text" class="form-control" id="inputEmail4" placeholder="First Name">
+                <input type="text" class="form-control" id="inputEmail4" placeholder="First Name" name="fname">
               </div>
               <div class="form-group col-md-6">
                 <label for="inputPassword4">Last Name</label>
-                <input type="text" class="form-control" id="inputPassword4" placeholder="Last Name">
+                <input type="text" class="form-control" id="inputPassword4" placeholder="Last Name" name="lname">
               </div>
             </div>
             <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputEmail4">Start Date</label>
-                <input type="date" class="form-control" id="inputEmail4">
+                <input type="date" class="form-control" id="inputEmail4" name="startdate"> 
               </div>
               <div class="form-group col-md-6">
                 <label for="inputPassword4">Job Title</label>
-                <input type="text" class="form-control" id="inputPassword4" placeholder="Job Title">
+                <input type="text" class="form-control" id="inputPassword4" placeholder="Job Title" name="jobtitle">
               </div>
             </div>
             <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" id="customRadioInline1" name="Type" class="custom-control-input">
+                <input type="radio" id="customRadioInline1" name="Type" class="custom-control-input" name="type" value="Full Timer">
                 <label class="custom-control-label" for="customRadioInline1">Full Timer</label>
               </div>
               <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" id="customRadioInline2" name="Type" class="custom-control-input">
+                <input type="radio" id="customRadioInline2" name="Type" class="custom-control-input" name="type" value="Intern/Freelancer">
                 <label class="custom-control-label" for="customRadioInline2">Intern/Freelancer</label>
               </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputCity">City</label>
-                <input type="text" class="form-control" id="inputCity">
+                <input type="text" class="form-control" id="inputCity" name="city">
               </div>
              
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="inputCity">Designation</label>
-                  <input type="text" class="form-control" id="inputCity">
+                  <input type="text" class="form-control" id="inputCity" name="designation">
                 </div>
                
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
                     <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Team</label>
-                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="team">
                       <option selected>Choose...</option>
-                      <option value="1">Developer</option>
-                      <option value="2">Tester</option>
-                      <option value="3">Others</option>
+                      <option value="developer">Developer</option>
+                      <option value="tester">Tester</option>
+                      <option value="others">Others</option>
                     </select>
                 </div>
                
@@ -86,18 +86,18 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="inputCity">Team Manager</label>
-                  <input type="text" class="form-control" id="inputCity">
+                  <input type="text" class="form-control" id="inputCity" name="manager">
                 </div>
                
               </div>
               <div class="form-row">
                 <div class="form-group col-md-4">
                   <label for="inputCity">Salary Per Year</label>
-                  <input type="text" class="form-control" id="inputCity" placeholder="In Rupees">
+                  <input type="text" class="form-control" id="inputCity" placeholder="In Rupees" name="salary">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputCity">Date Of Salary</label>
-                    <input type="date" class="form-control" id="inputCity">
+                    <input type="date" class="form-control" id="inputCity" name="dateofsalary">
                   </div>
               </div>
             
