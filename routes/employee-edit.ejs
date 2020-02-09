@@ -16,9 +16,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="/employee-edit">Edit Details  <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link " href="/leave-approval">Leave Approval</a>
-                
+                <a class="nav-item nav-link active" href="/employee-edit">Edit Details <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="/leave-approval">Leave Approval</a>
+                <a class="nav-item nav-link" href="/review-details">Reviews</a>
               </div>
               <span class="navbar-text">
                 <button type="button" class="btn btn-danger" onclick="location.href='/admin'">Log Out</button>
@@ -28,31 +28,41 @@
           <table class="table">
             <thead class="thead-light">
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Name</th>
+                <th scope="col">Start Date</th>
+                <th scope="col">Job Title</th>
+                <th scope="col">Type</th>
+                <th scope="col">City</th>
+                <th scope="col">Designation</th>
+                <th scope="col">Team</th>
+                <th scope="col">Manager</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Salary Date</th>
+                <th scope="col">Tools</th>
               </tr>
             </thead>
             <tbody>
+             <% employee.forEach(function(x) {%>
+               
+              
               <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td><%= x.fname %> <%= x.lname  %> </td>
+                <td><%= x.start_date%></td>
+                <td><%= x.job_title %></td>
+                <td><%=x.type%></td>
+                <td><%=x.city%></td>
+                <td><%= x.designation  %> </td>
+                <td><%= x.team %> </td>
+                <td><%= x.manager %> </td>
+                <td><%=x.salary%></td>
+                <td><%= x.salary_date  %> </td>
+                <td>
+                    
+                    <button type="button" class="btn btn-success" name="edit"onclick="location.href='/employee-update/'+<%= x.uid %> ">Edit</button>
+                    
+                </td>
               </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
+            <%});%>
             </tbody>
           </table>
        </div>

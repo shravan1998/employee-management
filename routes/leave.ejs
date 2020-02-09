@@ -28,33 +28,33 @@
               </span>
             </div>
           </nav>
-          <form>
+          <form method="POST" action="/leave">
               <div class="row">
                 <div class="form-group col-md-6">
                     <label for="days">Number Of days</label>
-                    <input class="form-control" type="number" id="days">
+                    <input class="form-control" type="number" id="days" name="days">
         </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
               <label for="inputEmail4">From</label>
-              <input type="date" class="form-control" id="inputEmail4">
+              <input type="date" class="form-control" id="inputEmail4" name="fromdate">
             </div>
             <div class="form-group col-md-6">
               <label for="inputPassword4">To</label>
-              <input type="date" class="form-control" id="inputPassword4">
+              <input type="date" class="form-control" id="inputPassword4" name="todate">
             </div>
           </div>
       
         <div class="row">
             <div class="form-group col-md-6">
-            <input class="form-control" type="text" placeholder="Enter Subject">
+            <input class="form-control" type="text" placeholder="Enter Subject" name="subject">
             </div>
         </div>
             <div class="row">
                 <div class="form-group col-md-6">
                     <label class="my-1 mr-2" for="details">Message</label>
-            <textarea class="form-control" rows="5" id="details">
+            <textarea class="form-control" rows="5" id="details" name="message">
                </textarea>
               </div>
         </div>

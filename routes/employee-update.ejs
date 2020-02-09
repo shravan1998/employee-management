@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Employee Management</title>
+        <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+        <link href="/style.css" rel="stylesheet">
+      
+    </head>
+    <body>
+       <div class="home-container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Employee Management</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="/employee-edit">Edit Details <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="/leave-approval">Leave Approval</a>
+                <a class="nav-item nav-link" href="/review-details">Reviews</a>
+              </div>
+              <span class="navbar-text">
+                <button type="button" class="btn btn-danger" onclick="location.href='/admin'">Log Out</button>
+              </span>
+            </div>
+          </nav>
+          <form method="POST" action="/employee-update/<%=employee.uid  %> ">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">First Name</label>
+                <input type="text" class="form-control" id="inputEmail4" placeholder="First Name" name="fname" value="<%= employee.fname %> ">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Last Name</label>
+                <input type="text" class="form-control" id="inputPassword4" placeholder="Last Name" name="lname" value="<%= employee.lname %> ">
+              </div>
+            </div>
+            <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Start Date</label>
+                <input type="date" class="form-control" id="inputEmail4" name="startdate" value="<%= employee.start_date%> "> 
+              </div>
+              
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Job Title</label>
+                <input type="text" class="form-control" id="inputPassword4" placeholder="Job Title" name="jobtitle" value="<%= employee.job_title %> ">
+              </div>
+            </div>
+            <% if(employee.type=="Full Timer"){ %> 
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline1" class="custom-control-input" name="type" value="Full Timer" checked>
+                <label class="custom-control-label" for="customRadioInline1">Full Timer</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline2" class="custom-control-input" name="type" value="Intern/Freelancer">
+                <label class="custom-control-label" for="customRadioInline2">Intern/Freelancer</label>
+              </div>
+            <% }else{ %>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline1" class="custom-control-input" name="type" value="Full Timer">
+                    <label class="custom-control-label" for="customRadioInline1">Full Timer</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline2" class="custom-control-input" name="type" value="Intern/Freelancer" checked>
+                    <label class="custom-control-label" for="customRadioInline2">Intern/Freelancer</label>
+                  </div>
+            <% } %> 
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity" name="city" value="<%= employee.city %>">
+              </div>
+             
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputCity">Designation</label>
+                  <input type="text" class="form-control" id="inputCity" name="designation" value="<%= employee.designation %>">
+                </div>
+               
+              </div>
+              <% if(employee.team=="developer"){ %> 
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label class="my-1 mr-2" for="team">Team</label>
+                    <select class="custom-select my-1 mr-sm-2" id="team" name="team">
+                      <option>Choose...</option>
+                      <option value="developer" selected>Developer</option>
+                      <option value="tester">Tester</option>
+                      <option value="others">Others</option>
+                    </select>
+                </div>
+               
+              </div>
+            <% }else if(employee.team=="tester"){ %>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label class="my-1 mr-2" for="team">Team</label>
+                        <select class="custom-select my-1 mr-sm-2" id="team" name="team">
+                          <option>Choose...</option>
+                          <option value="developer">Developer</option>
+                          <option value="tester" selected>Tester</option>
+                          <option value="others">Others</option>
+                        </select>
+                    </div>
+                   
+                  </div>
+            <% }else{ %>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label class="my-1 mr-2" for="team">Team</label>
+                        <select class="custom-select my-1 mr-sm-2" id="team" name="team">
+                          <option>Choose...</option>
+                          <option value="developer">Developer</option>
+                          <option value="tester">Tester</option>
+                          <option value="others" selected>Others</option>
+                        </select>
+                    </div>
+                   
+                  </div>
+            <% } %>   
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputCity">Team Manager</label>
+                  <input type="text" class="form-control" id="inputCity" name="manager" value="<%= employee.manager %> ">
+                </div>
+               
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="inputCity">Salary Per Year</label>
+                  <input type="text" class="form-control" id="inputCity" placeholder="In Rupees" name="salary" value="<%= employee.salary %> ">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputCity">Date Of Salary</label>
+                    <input type="date" class="form-control" id="inputCity" name="dateofsalary">
+                  </div>
+              </div>
+            
+            <button type="submit" class="btn btn-primary">Update</button>
+          </form>
+       </div>
+              
+    </body>
+   
+</html>

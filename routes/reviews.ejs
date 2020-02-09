@@ -28,11 +28,11 @@
               </span>
             </div>
           </nav>
-          <form>
+          <form method="POST" action="/reviews">
               <div class="row">
                 <div class="form-group col-md-6">
             <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Rating</label>
-            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="rating">
               <option selected>1</option>
               <option value="1">2</option>
               <option value="2">3</option>
@@ -43,13 +43,13 @@
         </div>
         <div class="row">
             <div class="form-group col-md-6">
-            <input class="form-control" type="text" placeholder="Enter Subject">
+            <input class="form-control" type="text" placeholder="Enter Subject" name="subject">
             </div>
         </div>
             <div class="row">
                 <div class="form-group col-md-6">
                     <label class="my-1 mr-2" for="details">Description(Optional)</label>
-            <textarea class="form-control" rows="5" id="details">
+            <textarea class="form-control" rows="5" id="details" name="description">
                </textarea>
               </div>
         </div>
